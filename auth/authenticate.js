@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 const jwtKey =
   process.env.JWT_SECRET ||
@@ -7,6 +8,7 @@ const jwtKey =
 // quickly see what this file exports
 module.exports = {
   authenticate,
+  jwtKey
 };
 
 // implementation details
